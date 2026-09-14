@@ -8,8 +8,17 @@ Foi criado uma instânica dentro da plataforma Azure para um banco de dados MySQ
 se tratar apenas de um teste.
 
 ## 3.	Criar o Banco de dados com base disponível no github
-Foi criado um banco de dados na Azure dentro da instância MySQL criada. A criação foi feita através do poweshell no próprio navegador. Esta etapa foi executada de forma simples, seguindo o comando e o código disponibilizado
-para criação do banco e das tabelas. Após criação foi verificado que o banco e as tabelas apareciam corretamente quando requisitada através do comando "show databases" e "show tables"
+Foi criado um banco de dados na Azure dentro da instância MySQL criada. A criação foi feita através do poweshell no próprio navegador. Esta etapa foi executada de forma simples, seguindo o comando e o código disponibilizado para criação do banco e das tabelas.
+
+Para popular as tabelas com o dados, foi utilizado o software Dbeaver. Precisei adicionar o seguinte comando no código para funcionar:
+No inicio do código para desativar as chaves estrangeiras
+SET FOREIGN_KEY_CHECKS = 0;
+No fim do código para reativar:
+SET FOREIGN_KEY_CHECKS = 1;
+
+Após estas alterações, os dados foram populados nas tabelas.
 
 ## 4.	Integração do Power BI com MySQL no Azure 
-Esta etapa apresentou maiores dificuldades na execução. Primeiro foi necessário instalar o conector adequado no Power BI. Após esta etapa, em que foi necessário baixar e instalar no site da comunidade da oracle, 
+Após alguns erros, tiver que reconfigurar o firewall na azure. Após esta ação consegui conectar o power BI a nuvem e carregar as tabelas. Esta etapa do desafio ocorreu sem outros problemas.
+
+## 5. 
