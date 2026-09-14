@@ -27,4 +27,8 @@ Os dados foram transformados e adequados conforme orientações do desafio. Abai
 2 - As horas dos projetos foram validadas e colunas complexas foram separadas para facilitar a leitura e modelagem;
 3 - Os valores nulos na coluna Super_ssn foram analisados e devidamente tratados como os gerentes da empresa.
 4 - Foi feita a checagem cruzada para garantir que nenhum departamento ficasse sem um gerente atribuído. Algumas linhas foram preenchidas pois estavam em branco;
-5 - 
+5 - As colunas de "Nome" e "Sobrenome" foram concatenadas em uma única coluna para melhorar a apresentação visual no relatório;
+6 - A tabela employee foi mesclada com a tabela department (usando employee como base no Left Join). Também realizamos a junção (Self-Join) para trazer o nome do gerente de cada colaborador em uma nova coluna. Colunas redundantes geradas nestes processos foram eliminadas.
+7 - Os dados foram agrupados para gerar a contagem exata de colaboradores subordinados a cada gerente;
+8 - No contexto de trazer os nomes dos gerentes ou departamentos para a tabela de colaboradores, foi utilizado a função Mesclar (Merge) porque era preciso cruzar os dados horizontalmente (adicionar novas colunas/atributos baseadas em uma chave comum, como o ID). A função "Acrescentar" (Append) não serviria aqui, pois ela empilha os dados verticalmente (adicionando novas linhas);
+9 - Todas as colunas remanescentes que não tem utilidade nos visuais ou nas medidas do relatório foram excluídas de todas as tabelas.
